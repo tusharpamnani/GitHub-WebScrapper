@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Image Finder</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+
+<body>
+
+    <h1>GitHub Profile Image Finder</h1>
+    <div class="form">
+        <form method="post">
+            <label for="GitHubUser">Enter the GitHub username: </label>
+            <input type="text" id="GitHubUser" name="GitHubUser" required>
+            <button type="submit">Submit</button>
+    </form>
+    
+    <div class="img-container"> 
+        {% if profileImage %}
+    <img src="{{ profileImage }}" alt="GitHub Avatar">
+    {% endif %}
+    </div>
+    
+    
+    </div>
+    
+    
+</body>
+
+</html>
